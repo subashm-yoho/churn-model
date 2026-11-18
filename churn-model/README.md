@@ -36,3 +36,4 @@ Dataset: Telco Customer Churn. Put WA_Fn-UseC_-Telco-Customer-Churn.csv in the s
 - CV: 5-fold LogisticRegression gives 0.81 +/- 0.01, a stable estimate.
 - Leakage: scaling before the split leaks test statistics into training. Fix: split first, fit the scaler on train only. Accuracy was same here (0.8038) because the dataset is large, but the method is still wrong.
 - Supervised: spam detection, house price prediction. Unsupervised: customer segmentation, anomaly detection.
+
