@@ -1,2 +1,4 @@
 Model,Val R2,Val MAE,Val RMSE
-Lasso (alpha=0.5),0.1962,23.35,27.412
+LinearRegression,0.9989,0.78,1.033
+Ridge (alpha=1),0.9989,0.78,1.034
+Lasso (alpha=0.5),0.9916,2.258,2.807

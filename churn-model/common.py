@@ -35,7 +35,7 @@ def split_data(X, y):
 
 def build_preprocess(X):
     nominal_cols = [c for c in X.columns
-                    if X[c].dtype == "object" and c not in ORDINAL_COLS]
+                    if X[c].dtype.kind not in "if" and c not in ORDINAL_COLS]
     return ColumnTransformer([
         ("num", Pipeline([("imp", SimpleImputer(strategy="median")),
                           ("scale", StandardScaler())]), NUM_COLS),
