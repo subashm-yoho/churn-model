@@ -46,3 +46,4 @@ Dataset: Telco Customer Churn. Put WA_Fn-UseC_-Telco-Customer-Churn.csv in the s
 - Pipeline: ColumnTransformer inside a Pipeline, so imputing, scaling and encoding are re-fit on each CV fold. No preprocessing outside cross-validation.
 - Result: Pipeline CV accuracy (KNN imputer) 0.7948 +/- 0.0097, validation accuracy 0.7913. Test set not used.
 - joblib: pipeline saved and reloaded, then predicted 3 new raw rows: [1 0 0]. One row had missing TotalCharges and was handled by the pipeline.
+ 

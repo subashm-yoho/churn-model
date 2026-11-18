@@ -27,7 +27,7 @@ X_temp, y_temp, test_size=0.25, stratify=y_temp, random_state=RS)
 
 
 ordinal_cols = ["Contract"]
-nominal_cols = [c for c in X.columns if X[c].dtype == "object" and c not in ordinal_cols]
+nominal_cols = [c for c in X.columns if X[c].dtype.kind not in "if" and c not in ordinal_cols]
 num_cols = ["SeniorCitizen", "tenure", "MonthlyCharges", "TotalCharges",
 "signup_year", "signup_month", "charge_per_tenure", "log_total_charges"]
 
