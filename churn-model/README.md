@@ -37,3 +37,12 @@ Dataset: Telco Customer Churn. Put WA_Fn-UseC_-Telco-Customer-Churn.csv in the s
 - Leakage: scaling before the split leaks test statistics into training. Fix: split first, fit the scaler on train only. Accuracy was same here (0.8038) because the dataset is large, but the method is still wrong.
 - Supervised: spam detection, house price prediction. Unsupervised: customer segmentation, anomaly detection.
 
+## Task 2 - Preprocessing, Features and Pipeline
+
+- Script: `full_pipeline.py` (features in `features_demo.py`, saved model `churn_pipeline.joblib`)
+- Missing values: TotalCharges had 11 blank values, converted to NaN. SimpleImputer (median for numeric, most frequent for categorical) and KNNImputer both tried. KNN fills using similar customers, median gives one value for all.
+- Encoding: OneHotEncoder for unordered columns, OrdinalEncoder for Contract (Month-to-month < One year < Two year).
+- New features: signup_year and signup_month (built from tenure, as Telco has no date column), charge_per_tenure (MonthlyCharges / (tenure + 1)), log_total_charges (log1p of skewed TotalCharges).
+- Pipeline: ColumnTransformer inside a Pipeline, so imputing, scaling and encoding are re-fit on each CV fold. No preprocessing outside cross-validation.
+- Result: Pipeline CV accuracy (KNN imputer) 0.7948 +/- 0.0097, validation accuracy 0.7913. Test set not used.
+- joblib: pipeline saved and reloaded, then predicted 3 new raw rows: [1 0 0]. One row had missing TotalCharges and was handled by the pipeline.
