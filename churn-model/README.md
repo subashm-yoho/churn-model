@@ -19,4 +19,4 @@ Dataset: Telco Customer Churn. Put WA_Fn-UseC_-Telco-Customer-Churn.csv in the s
 - Best model: XGBoost (tuned), test ROC-AUC 0.846, F1 0.625
 - Logistic Regression (tuned) 0.841, Random Forest 0.822
 - Threshold 0.56 chosen to catch 75% of churners
-- Top drivers: month-to-month contract, no online security, no tech support, fiber optic, electronic check payment
+- Top drivers: month-to-month contract, no online security, no tech support, fiber optic, electronic check paymen

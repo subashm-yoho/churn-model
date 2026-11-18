@@ -1,0 +1,13 @@
+FINAL TEST SET EVALUATION (XGBoost tuned, threshold=0.56)
+ROC-AUC : 0.8461
+F1 : 0.6285
+Precision : 0.5416
+Recall : 0.7487
+
+Confusion matrix (rows = actual, cols = predicted)
+Pred No Pred Yes
+Actual No    798    237
+Actual Yes     94    280
+
+TN=798 FP=237 FN=94 TP=280
+Churners caught: 280 of 374 (74.9%)
