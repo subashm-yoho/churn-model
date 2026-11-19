@@ -9,6 +9,9 @@ Branch: feature/churn-model
 Dataset: Telco Customer Churn. Put WA_Fn-UseC_-Telco-Customer-Churn.csv in the same folder if no internet.
 
 
+
+
+# week 2 weekly assessment
 ## Task 3 - Models: Supervised and Unsupervised
 
 Files: `classifier.py` (output `out3.txt`), `task3_regression.py` (output `out3b.txt`), `kmeans.py`, shared helpers in `common.py`.
